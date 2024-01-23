@@ -1,7 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "../styles/Header/style.module.css";
 @import "../styles/Home/styles.module.css";
+@import "../styles/Footer/style.module.css";
 
 
 

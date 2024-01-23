@@ -1,7 +1,33 @@
-.background-overlay {
-    background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(230, 243, 252, 1)), url("../../assets/pages/SectionHero/Section-Hero-Banner.jpeg");
-    /* background-image: url("../../assets/pages/SectionHero/Section-Hero-Banner.jpeg"); */
+
+.background-HeroBanner-overlay {
+    background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(230, 243, 252, 1)), url("../../assets/pages/SectionHero/SectionHeroBanner.jpg");
 }
+
+.background-DifferentialBanner-overlay {
+    /* background:linear-gradient(to bottom, rgba(230, 243, 252, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(102, 176, 224)), url("../../assets/pages/SectionDifferential/SectionDifferencialBanner.jpg"); */
+    background:linear-gradient(to bottom, rgba(230, 243, 252, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(230, 243, 252, 1)), url("../../assets/pages/SectionDifferential/SectionDifferencialBanner.jpg");
+}
+
+.background-ContactBanner-overlay {
+    background:linear-gradient(to bottom, rgba(230, 243, 252, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(230, 243, 252, 1)), url("../../assets/pages/SectionContact/SectionContactBanner.jpeg");
+}
+
+.link-underline {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#02B3EE, #02B3EE);
+    background-size: 0 12px;
+    background-position: 40% 160%;
+    background-repeat: no-repeat;
+    transition: all .5s;
+}
+
+.link-underline:hover {
+    color: rgb(0 255 255 / var(--tw-text-opacity));
+    transition: all .5s;
+    background-size: 90% 12px;
+    background-position: 40% 160%
+}
+
 
 
 .change-color .icon {
@@ -12,4 +38,54 @@
     background-color: #02B3EE !important;
     color: white !important;
     transition: all .5s;
+
 }
+
+.change-color-diff {
+    transition: all .5s;
+}
+
+.change-color-diff:hover {
+    transition: all .5s;
+    color: #02B3EE !important;
+}
+
+.benefits {
+    background: rgb(222, 240, 252, 0.5);
+    transition: all .5s;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+
+.form {
+    background: rgb(222, 240, 252, 0.2);
+    transition: all .5s;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* opacity: 0.7; */
+}
+
+.input {
+    outline: none;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    background-color: transparent;
+
+    font-size: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    /* background-color: rgba(230, 243, 252, 1);  */
+    background-color: rgba(222, 240, 252, 1);
+    border-radius: 10px;
+    /* box-shadow: 0px 0px 1px 1px rgb(0 0 0 / 0.2); */
+}
+
+
+
+

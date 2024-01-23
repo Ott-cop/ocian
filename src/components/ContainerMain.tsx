@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import Header from "./Header";
 
 export default function ContainerMain({children}: any) {
@@ -7,6 +8,7 @@ export default function ContainerMain({children}: any) {
             <div>
                 {children}
             </div>
+            <Footer></Footer>
         </>
         
     )

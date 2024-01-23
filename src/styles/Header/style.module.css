@@ -1,0 +1,24 @@
+.header-scrolled {
+    background: rgb(222, 240, 252, 0.5);
+    transition: all .5s;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+}
+
+/* .header-scrolled:hover {
+    background: rgb(222, 240, 252, 1);
+    transition: all .5s;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+} */
+
+.change-icon-menu .change-text-menu {
+    transition: all .5s;
+    color: white !important;
+}
+
+.change-icon-menu:hover .change-text-menu {
+    color: rgb(2 179 238) !important;
+}
