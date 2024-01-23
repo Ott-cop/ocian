@@ -8,7 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {'primary-color': '#02B3EE'},
       backgroundImage: {
+        // 'img_bg_hero': 'url("../assets/pages/SectionHero/Section-Hero-Banner.jpeg")',
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',

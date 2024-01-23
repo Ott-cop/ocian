@@ -1,8 +1,12 @@
+import SectionHero from "@/components/Home/SectionHero/SectionHero";
+import SectionServices from "@/components/Home/Services/SectionServices";
+
 export default function Home() {
     return(
-        <div className="relative top-[100px]">
-            <h1 className="text-slate-700">Hello World!</h1>
-        </div>
+        <>
+        <SectionHero></SectionHero>
+        <SectionServices></SectionServices>
+        </>
         
         
     )
