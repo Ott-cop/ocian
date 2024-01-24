@@ -80,11 +80,148 @@
     display: flex;
     gap: 6px;
     align-items: center;
-    /* background-color: rgba(230, 243, 252, 1);  */
     background-color: rgba(222, 240, 252, 1);
     border-radius: 10px;
-    /* box-shadow: 0px 0px 1px 1px rgb(0 0 0 / 0.2); */
+   
 }
+
+@media (max-width: 1529px) {
+    .container {
+        max-width: 1200px !important;
+    }
+}
+
+
+@media (max-width: 1339px) {
+    .container {
+        max-width: 1000px !important;
+    }
+}
+
+@media (max-width: 1193px) {
+    .container {
+        max-width: 900px !important;
+    }
+}
+
+@media (max-width: 1063px) {
+    .differential-section {
+        justify-content: center !important;
+    }
+    .title-differential {
+        text-align: center;
+    }
+    .paragraph-differential {
+        text-align: center;
+    }
+}
+
+@media (max-width: 999px) {
+    .container {
+        max-width: 800px !important;
+    }
+    .text-width {
+        width: 800px !important;
+    }
+    .title-hero {
+        justify-content: center !important;
+    }
+    .title-hero h1 {
+        text-align: center !important;
+    }
+    .button-hero {
+        justify-content: center !important;
+    }
+
+
+}
+
+@media (max-width: 847px) {
+    .container {
+        max-width: 700px !important;
+    }
+    .title-hero h1 {
+        font-size: 35px !important;
+    }
+    .text-width {
+        width: 700px !important;
+    }
+    .title-service, .title-differential, .title-contact {
+        font-size: 30px !important;
+    }
+    .paragraph-service, .paragraph-differential .paragraph-contact {
+        font-size: 18px !important;
+    }
+
+    .title-benefit {
+        font-size: 16px !important;
+    }
+    .icon-benefit {
+        font-size: 18px !important;
+    }
+    .benefits {
+        height: 280px !important;
+    }
+
+    .input {
+        font-size: 16px !important;
+    }
+
+    .button {
+        font-size: 12px;
+    }
+
+}
+
+
+@media (max-width: 757px) {
+    .container {
+        max-width: 600px !important;
+    }
+    .text-width {
+        width: 500px !important;
+    }
+    .title-service {
+        font-size: 30px !important;
+    }
+    .paragraph-service {
+        font-size: 18px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 500px !important;
+    }
+    .section-services {
+        height: 130vh !important;
+    }
+}
+
+@media (max-width: 511px) {
+    .container {
+        max-width: 400px !important;
+    }
+
+    .section-services {
+        height: 150vh !important;
+    }
+
+    .benefits {
+        height: 450px !important;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 300px !important;
+    }
+}
+
+@media (max-width: 411px) {
+    .form-contact {
+        grid-template-columns: 100% !important;
+    }
+}
+
 
 
 

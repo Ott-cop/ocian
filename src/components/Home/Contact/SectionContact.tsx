@@ -10,12 +10,12 @@ export default function SectionContact() {
             <Container>
                 <div className="flex w-full justify-center">
                     <div className="w-full text-center mt-[200px]">
-                        <h2 className="text-black text-[40px] font-medium mb-2">ENVIE UMA PROPOSTA</h2>
-                        <p className="text-black text-[20px] mb-10">Preencha o formulário abaixo ou ainda nos faça uma visita: Rua Rio Branco, 472 Barra Bonita-SP</p>
+                        <h2 className="title-contact text-black text-[40px] font-medium mb-2">ENVIE UMA PROPOSTA</h2>
+                        <p className="paragraph-contact text-black text-[20px] mb-10">Preencha o formulário abaixo ou ainda nos faça uma visita: Rua Rio Branco, 472 Barra Bonita-SP</p>
                         <div className="flex justify-center">
-                            <div className="form px-[15px] w-[655px] justify-center py-5  rounded-[20px]" style={{boxShadow: "0 25px 50px 12px rgb(0 0 0 / 0.25)"}}>
+                            <div className="form px-[15px] w-[655px] justify-center py-5 rounded-[20px]" style={{boxShadow: "0 25px 50px 12px rgb(0 0 0 / 0.25)"}}>
                                 <form className="grid grid-cols-1 gap-3 mb-6">
-                                    <div className="grid grid-cols-3 gap-3">                                
+                                    <div className="form-contact grid grid-cols-3 gap-3">                                
                                         <div className="input-group">
                                             <i className="ml-3 text-primary-color"><FontAwesomeIcon icon={faUser}></FontAwesomeIcon></i>
                                             <input className="input" type="text" id="fname" placeholder="Seu nome" />

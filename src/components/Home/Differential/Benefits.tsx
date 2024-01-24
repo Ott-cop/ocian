@@ -1,4 +1,5 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import "@/styles/Home/styles.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ReactNode } from "react";
 
@@ -16,8 +17,8 @@ export default function Benefits({ icon, children }: Props) {
     return(
         <>
         <div className="change-color-diff flex gap-3 items-center">
-            <i style={{fontSize: "24px", color: "#02b3ee"}}><FontAwesomeIcon icon={icon}></FontAwesomeIcon></i>
-            <span className="text-[20px] font-medium">{children}</span>
+            <i style={{fontSize: "24px", color: "#02b3ee"}} className="icon-benefit"><FontAwesomeIcon icon={icon}></FontAwesomeIcon></i>
+            <span className="title-benefit text-[20px] font-medium">{children}</span>
         </div>
         </>
     )
