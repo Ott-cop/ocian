@@ -5,6 +5,8 @@
 @import "../styles/Home/styles.module.css";
 @import "../styles/Footer/style.module.css";
 
-
+/* * {
+    overflow-x: hidden !important;
+} */
 
 

@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function SectionContact() {
     return(
         <>
-        <section className="flex flex-1 w-full h-[100vh] background-ContactBanner-overlay bg-no-repeat bg-cover">
+        <section className="section-contact flex flex-1 w-full h-[100vh] background-ContactBanner-overlay bg-no-repeat bg-cover">
             <Container>
                 <div className="flex w-full justify-center">
                     <div className="w-full text-center mt-[200px]">
