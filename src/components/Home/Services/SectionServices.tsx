@@ -2,14 +2,17 @@ import { faBookOpen, faCloudArrowDown, faFileExport, faFilePowerpoint, faFileShi
 import Service from "./Service";
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
+import { useEffect } from "react";
+import "@/styles/Home/styles.module.css";
 
 export default function SectionServices() {
+
     return (
         <>
         <section className="section-services flex w-full h-[100vh] bg-[#E6F3FC]">
         <Container>
             <div className="w-full relative mt-[130px] justify-center">
-                <div className="block justify-center">
+                <div className="block justify-center hiddenable">
                     <div className="flex relative justify-center w-full mb-6 ">
                         <div className="text-width w-[1000px]">
                             <h2 className="title-service text-[40px] font-medium text-center mb-2">UM SISTEMA COMPLETO PARA A <span className="text-primary-color">GESTÃO</span> DO SEU CARTÓRIO</h2>
@@ -31,10 +34,7 @@ export default function SectionServices() {
                     <div className="flex w-full justify-center mt-20">
                         <Button>SAIBA MAIS</Button>
                     </div>
-                    
                 </div>
-                
-                
             </div>
         </Container>
         </section>

@@ -1,15 +1,14 @@
-
 .background-HeroBanner-overlay {
-    background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(230, 243, 252, 1)), url("../../assets/pages/SectionHero/SectionHeroBanner.jpg");
+    background:linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(230, 243, 252, 1)), url("../../assets/pages/Home/SectionHero/SectionHeroBanner.jpg");
 }
 
 .background-DifferentialBanner-overlay {
     /* background:linear-gradient(to bottom, rgba(230, 243, 252, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(102, 176, 224)), url("../../assets/pages/SectionDifferential/SectionDifferencialBanner.jpg"); */
-    background:linear-gradient(to bottom, rgba(230, 243, 252, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(230, 243, 252, 1)), url("../../assets/pages/SectionDifferential/SectionDifferencialBanner.jpg");
+    background:linear-gradient(to bottom, rgba(230, 243, 252, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(230, 243, 252, 1)), url("../../assets/pages/Home/SectionDifferential/SectionDifferencialBanner.jpg");
 }
 
 .background-ContactBanner-overlay {
-    background:linear-gradient(to bottom, rgba(230, 243, 252, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(230, 243, 252, 1)), url("../../assets/pages/SectionContact/SectionContactBanner.jpeg");
+    background:linear-gradient(to bottom, rgba(230, 243, 252, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(230, 243, 252, 1)), url("../../assets/pages/Home/SectionContact/SectionContactBanner.jpeg");
 }
 
 .link-underline {
@@ -296,75 +295,3 @@
         height: 1900px !important;
     }
 }
-
-/* @media (max-width: 284px) {
-    .section-services {
-        height: 250vh !important;
-    }
-}
- */
-
-
-
-
-
-
-
-
-/* @media (max-height: 780px) {
-    .section-services {
-        height: 165vh !important;
-    }
-}
-
-@media (max-height: 750px) {
-    .section-contact {
-        height: 130vh !important;
-    }
-    .section-differential {
-        height: 130vh !important;
-    }
-}
-
-@media (max-height: 700px) {
-    .section-services {
-        height: 180vh !important;
-    }
-    .section-contact {
-        height: 145vh !important;
-
-    }
-}
-
-@media (max-height: 657px) {
-    .section-services {
-        height: 190vh !important;
-    }
-    .section-differential {
-        height: 160vh !important;
-    }
-    .section-contact {
-        height: 145vh !important;
-
-    }
-}
-
-
-@media (max-height: 615px) {
-    .section-services {
-        height: 210vh !important;
-    }
-    .section-differential {
-        height: 160vh !important;
-    }
-    .section-contact {
-        height: 155vh !important;
-
-    }
-}
- */
-
-
-
-
-

@@ -1,7 +1,6 @@
-
+import Link from 'next/link';
 import Logo from '@/assets/logo/logo.png'
 import Image from 'next/image'
-import IconSupport from '@/assets/icons/support-white.png'
 import { ItemMenu } from './ItemMenu'
 import "@/styles/Header/style.module.css"
 import { useEffect, useState } from 'react'
@@ -51,24 +50,24 @@ export default function Header() {
                     </div>
                     <ul className='flex items-center justify-center gap-10 responsive-header'>
                         <li>
-                            <a onClick={() => scrollTo('section-home')}>
+                            <Link href={"/"}>
                                 <ItemMenu name={"Home"}></ItemMenu>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a onClick={() => scrollTo('section-about')}>
+                            <Link href={"/about-us"}>
                                 <ItemMenu name={"Quem Somos"} padding={"w-[100px]"}></ItemMenu>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a onClick={() => scrollTo('section-about')}>
+                            <Link href={"/"}>
                                 <ItemMenu name={"Sistemas"}></ItemMenu>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a onClick={() => scrollTo('section-contact')}>
+                            <Link href={"/"}>
                                 <ItemMenu name={"Contato"}></ItemMenu>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                     <button className="contact change-icon-menu flex items-center justify-center gap-3 bg-primary-color hover:bg-transparent rounded-[30px] h-12 pl-6 pr-6 border-solid border-2 border-primary-color hover:border-primary-color duration-300">
@@ -82,18 +81,18 @@ export default function Header() {
     <div className={`container-menu flex-1 z-40 fixed items-center w-full m-0 pb-[10px] justify-center transition-all flex duration-700 ${isVisible ? '!flex' : '!hidden'}`}>
         <nav className='flex flex-col gap-4'>
             <i className="hamburguer transition-all duration-700" onClick={() => setMenuIsVisible(false)}><FontAwesomeIcon icon={faXmark} style={{color: "#02b3ee", fontSize: "20px"}}></FontAwesomeIcon></i>
-            <a onClick={() => scrollTo('section-home')} className='flex'>
+            <Link href={"/"}>
                 <ItemMenu name={"Home"} />
-            </a>
-            <a onClick={() => scrollTo('section-about')} className='flex'>
+            </Link>
+            <Link href={"/about-us"}>
                 <ItemMenu name={"Quem Somos"} />
-            </a>
-            <a onClick={() => scrollTo('section-characteristics')} className='flex'>
+            </Link>
+            <Link href={"/"}>
                 <ItemMenu name={"Sistemas"} />
-            </a>
-            <a onClick={() => scrollTo('section-contact')} className='flex'>
+            </Link>
+            <Link href={"/"}>
                 <ItemMenu name={"Contato"} />
-            </a>
+            </Link>
         </nav>
     </div>
     <i className="hamburguer flex fixed" onClick={() => setMenuIsVisible(true)}><FontAwesomeIcon icon={faBars} style={{color: "#02b3ee", fontSize: "20px"}}></FontAwesomeIcon></i>

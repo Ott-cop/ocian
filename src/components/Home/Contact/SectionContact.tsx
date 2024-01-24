@@ -8,7 +8,7 @@ export default function SectionContact() {
         <>
         <section className="section-contact flex flex-1 w-full h-[100vh] background-ContactBanner-overlay bg-no-repeat bg-cover">
             <Container>
-                <div className="flex w-full justify-center">
+                <div className="flex w-full justify-center hiddenable">
                     <div className="w-full text-center mt-[200px]">
                         <h2 className="title-contact text-black text-[40px] font-medium mb-2">ENVIE UMA PROPOSTA</h2>
                         <p className="paragraph-contact text-black text-[20px] mb-10">Preencha o formulário abaixo ou ainda nos faça uma visita: Rua Rio Branco, 472 Barra Bonita-SP</p>

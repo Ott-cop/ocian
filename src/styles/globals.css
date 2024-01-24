@@ -2,11 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 @import "../styles/Header/style.module.css";
+
 @import "../styles/Home/styles.module.css";
+@import "../styles/AboutUs/styles.module.css";
+
 @import "../styles/Footer/style.module.css";
 
-/* * {
-    overflow-x: hidden !important;
-} */
+.hiddenable {
+    opacity: 0;
+    transition: all 2s;
+}
 
-
+.show {
+    opacity: 1;
+}
