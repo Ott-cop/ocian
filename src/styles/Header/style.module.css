@@ -23,13 +23,13 @@
     bottom: 0px;
     right: 0px;
     left: 0px;
-    z-index: 999;
-    display: block;
+    z-index: 999 !important;
+    display: block !important;
     align-items: center !important;
     justify-content: center !important;
-    background: rgb(222, 240, 252, 0.5);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgb(222, 240, 252, 0.5) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
     transition: all 1s;
 }
 

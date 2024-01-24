@@ -39,9 +39,10 @@ export default function Header() {
     }
 
     return(
+        <>
         <header className={`flex flex-1 z-40 fixed items-center w-full m-0 pb-[10px] justify-center duration-500 ${isScroll ? 'header-scrolled' : ''}`}>
             <div className="w-full max-w-[1246px] px-[15px] mt-[10px] mx-auto">
-                <div className="flex flex-1 items-center justify-center gap-10">
+                <div className={`flex flex-1 items-center justify-center gap-10 `}>
                     <div className="w-full items-center justify-center gap-80">
                         <div className='flex logo-align'>
                             <Image src={Logo} alt={'Ocian Logo'} className='logo w-[130px]'></Image>
@@ -75,25 +76,27 @@ export default function Header() {
                             <span className="change-text-menu font-black tracking-wider text-[17px]">SUPORTE</span>
                     </button>
                 </div>
-                <div className={`container-menu transition-all flex duration-700 ${isVisible ? '!flex' : '!hidden'}`}>
-                    <nav className='flex flex-col gap-4'>
-                        <i className="hamburguer transition-all duration-700" onClick={() => setMenuIsVisible(false)}><FontAwesomeIcon icon={faXmark} style={{color: "#02b3ee", fontSize: "20px"}}></FontAwesomeIcon></i>
-                        <a onClick={() => scrollTo('section-home')} className='flex'>
-                            <ItemMenu name={"Home"} />
-                        </a>
-                        <a onClick={() => scrollTo('section-about')} className='flex'>
-                            <ItemMenu name={"Quem Somos"} />
-                        </a>
-                        <a onClick={() => scrollTo('section-characteristics')} className='flex'>
-                            <ItemMenu name={"Sistemas"} />
-                        </a>
-                        <a onClick={() => scrollTo('section-contact')} className='flex'>
-                            <ItemMenu name={"Contato"} />
-                        </a>
-                    </nav>
-                </div>
-                <i className="hamburguer flex" onClick={() => setMenuIsVisible(true)}><FontAwesomeIcon icon={faBars} style={{color: "#02b3ee", fontSize: "20px"}}></FontAwesomeIcon></i>
+                
             </div>
         </header>
+    <div className={`container-menu flex-1 z-40 fixed items-center w-full m-0 pb-[10px] justify-center transition-all flex duration-700 ${isVisible ? '!flex' : '!hidden'}`}>
+        <nav className='flex flex-col gap-4'>
+            <i className="hamburguer transition-all duration-700" onClick={() => setMenuIsVisible(false)}><FontAwesomeIcon icon={faXmark} style={{color: "#02b3ee", fontSize: "20px"}}></FontAwesomeIcon></i>
+            <a onClick={() => scrollTo('section-home')} className='flex'>
+                <ItemMenu name={"Home"} />
+            </a>
+            <a onClick={() => scrollTo('section-about')} className='flex'>
+                <ItemMenu name={"Quem Somos"} />
+            </a>
+            <a onClick={() => scrollTo('section-characteristics')} className='flex'>
+                <ItemMenu name={"Sistemas"} />
+            </a>
+            <a onClick={() => scrollTo('section-contact')} className='flex'>
+                <ItemMenu name={"Contato"} />
+            </a>
+        </nav>
+    </div>
+    <i className="hamburguer flex fixed" onClick={() => setMenuIsVisible(true)}><FontAwesomeIcon icon={faBars} style={{color: "#02b3ee", fontSize: "20px"}}></FontAwesomeIcon></i>
+    </>
     );
 }
