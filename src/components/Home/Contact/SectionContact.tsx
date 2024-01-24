@@ -11,7 +11,7 @@ export default function SectionContact() {
                 <div className="flex w-full justify-center hiddenable">
                     <div className="w-full text-center mt-[200px]">
                         <h2 className="title-contact text-black text-[40px] font-medium mb-2">ENVIE UMA PROPOSTA</h2>
-                        <p className="paragraph-contact text-black text-[20px] mb-10">Preencha o formulário abaixo ou ainda nos faça uma visita: Rua Rio Branco, 472 Barra Bonita-SP</p>
+                        <p className="paragraph-contact text-black text-[20px] mb-10">Preencha o formulário abaixo ou ainda nos faça uma visita:<br/><span className="font-semibold"> Rua Rio Branco, 472 Barra Bonita-SP</span></p>
                         <div className="flex justify-center">
                             <div className="form px-[15px] w-[655px] justify-center py-5 rounded-[20px]" style={{boxShadow: "0 25px 50px 12px rgb(0 0 0 / 0.25)"}}>
                                 <form className="grid grid-cols-1 gap-3 mb-6">
@@ -33,8 +33,8 @@ export default function SectionContact() {
                                         <div className="input-group">            
                                             <input className="input ml-3" type="text" id="fsubject" placeholder="Assunto a tratar" />
                                         </div>
-                                        <div className="input-group pb-10">
-                                            <input className="input ml-3" type="text" id="fmessage" placeholder="Sua mensagem bemmmm detalhada" />
+                                        <div className="input-group">
+                                            <textarea className="input ml-3" id="fmessage" rows={6} maxLength={500} placeholder="Sua mensagem bemmmm detalhada" />
                                         </div>
                                     </div>
 

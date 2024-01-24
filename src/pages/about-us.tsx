@@ -1,6 +1,7 @@
 import SectionAbout from "@/components/AboutUs/SectionAbout/SectionAbout";
 import SectionHero from "@/components/AboutUs/SectionHero/SectionHero";
 import { useEffect } from "react";
+import "@/styles/AboutUs/styles.module.css";
 
 export default function AboutUs() {
     useEffect(() => {

@@ -75,14 +75,17 @@
     font-size: 20px;
 }
 
+
+
 .input-group {
     display: flex;
+    width: 100% !important;
     gap: 6px;
     align-items: center;
     background-color: rgba(222, 240, 252, 1);
     border-radius: 10px;
-   
 }
+
 
 .benefits {
     overflow-y: hidden;
@@ -162,10 +165,10 @@
     .text-width {
         width: 700px !important;
     }
-    .title-service, .title-differential, .title-contact {
+    .title-service, .title-differential, .title-contact, .title-AboutUs {
         font-size: 30px !important;
     }
-    .paragraph-service, .paragraph-differential .paragraph-contact {
+    .paragraph-service, .paragraph-differential, .paragraph-contact, .paragraph-AboutUs {
         font-size: 18px !important;
     }
 
@@ -269,14 +272,16 @@
         font-size: 16px !important;
     }
     .title-benefit {
-        font-size: 10px !important;
+        font-size: 12px !important;
+        width: 200px !important;
     }
     .benefits-grid {
         width: 100% !important;
+
     }
     .benefits {
         height: 400px !important;
-        width: 100% !important;
+        width: 270px !important;
     }
     .section-services {
         height: 1300px !important;
@@ -294,4 +299,9 @@
     .section-services {
         height: 1900px !important;
     }
+
+    .title-benefit {
+        width: 180px !important;
+    }
 }
+
