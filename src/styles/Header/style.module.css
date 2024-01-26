@@ -50,6 +50,9 @@
         top: 1rem;
         right: 1rem;
     }
+    .menu {
+        gap: 0px !important;
+    }
     .responsive-header ul, .contact {
         display: none !important;
     }
@@ -58,6 +61,7 @@
     }
     .logo-align {
         justify-content: center !important;
+        
     }
     .text-itemmenu {
         font-size: 20px !important;

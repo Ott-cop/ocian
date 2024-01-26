@@ -41,7 +41,7 @@ export default function Header() {
         <>
         <header className={`flex flex-1 z-40 fixed items-center w-full m-0 pb-[10px] justify-center duration-500 ${isScroll ? 'header-scrolled' : ''}`}>
             <div className="w-full max-w-[1246px] px-[15px] mt-[10px] mx-auto">
-                <div className={`flex flex-1 items-center justify-center gap-10 `}>
+                <div className={`menu flex flex-1 items-center justify-center gap-10`}>
                     <div className="w-full items-center justify-center gap-80">
                         <div className='flex logo-align'>
                             <Image src={Logo} alt={'Ocian Logo'} className='logo w-[130px]'></Image>
