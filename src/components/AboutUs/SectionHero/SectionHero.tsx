@@ -8,7 +8,7 @@ export default function SectionHero() {
                 <Container>
                     <div className="title-hero flex w-full h-full justify-end items-center hiddenable">
                         <div className="flex-1 max-w-[520px] mt-[100px]">
-                            <h1 className="text-black text-[45px] font-semibold text-right">QUEM SOMOS</h1>
+                            <h1 className="text-black text-[50px] font-semibold text-right">QUEM SOMOS</h1>
                         </div>
                     </div>
                 </Container>
