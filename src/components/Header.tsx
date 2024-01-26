@@ -60,7 +60,7 @@ export default function Header() {
                             </Link>
                         </li>
                         <li>
-                            <Link href={"/"}>
+                            <Link href={"/system"}>
                                 <ItemMenu name={"Sistemas"}></ItemMenu>
                             </Link>
                         </li>
@@ -87,7 +87,7 @@ export default function Header() {
             <Link href={"/about-us"}>
                 <ItemMenu name={"Quem Somos"} />
             </Link>
-            <Link href={"/"}>
+            <Link href={"/system"}>
                 <ItemMenu name={"Sistemas"} />
             </Link>
             <Link href={"/"}>

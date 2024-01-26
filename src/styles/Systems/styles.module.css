@@ -1,0 +1,183 @@
+.characteristics {
+    background: rgb(222, 240, 252, 0.9);
+    transition: all .5s;
+}
+
+.characteristics {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#notes {
+    height: 250px !important;
+}
+#tdjp {
+    height: 350px !important;
+}
+#backup {
+    height: 200px !important;
+}
+#ged {
+    height: 250px !important;
+}
+#distributor {
+    height: 200px !important;
+}
+
+
+
+
+
+
+@media (max-width: 1629px) {
+    .section-system {
+        height: 1000px !important;
+    }
+}
+
+@media (max-width: 1529px) {
+    .characteristics {
+        height: 500px !important;
+    }
+}
+
+@media (max-width: 1350px) {
+    .characteristics {
+        height: 450px !important;
+    }
+    #protest {
+        height: 550px !important;
+    }
+}
+
+@media (max-width: 1339px) {
+    #tdjp {
+        height: 450px !important;
+    }
+    #ged {
+        height: 350px !important;
+    }
+    #distributor {
+        height: 250px !important;
+    }
+    
+}
+
+@media (max-width: 1207px) {
+    .characteristics {
+        height: 500px !important;
+    }
+}
+
+@media (max-width: 1193px) {
+    #notes {
+        height: 300px !important;
+    }
+}
+
+@media (max-width: 1063px) {
+    .system-section {
+        justify-content: center !important;
+    }
+}
+@media (max-width: 999px) {
+    #protest {
+        height: 600px !important;
+    }
+    #backup {
+        height: 250px !important;
+    }
+    #ged {
+        height: 400px !important;
+    }
+}
+
+@media (max-width: 757px) {
+    .characteristics-grid {
+        grid-template-columns: 300px !important;
+    }
+    .characteristics {
+        height: 700px !important;
+        width: 400px !important;
+    }
+    .section-system {
+        height: 1150px !important;
+    }
+    #protest {
+        height: 800px !important;
+    }
+    #notes {
+        height: 500px !important;
+    }
+    #backup {
+        height: 300px !important;
+    }
+    #ged {
+        height: 450px !important;
+    }
+    #distributor {
+        height: 400px !important;
+    }
+    
+}
+
+
+@media (max-height: 700px) {
+    .section-system {
+        height: 700px !important;
+    }
+}
+
+@media (max-width: 847px) {
+
+
+}
+
+@media (max-width: 600px) {
+
+    .characteristics {
+        height: 780px !important;
+    }
+    .section-system {
+        height: 1250px !important;
+    }
+}
+
+
+@media (max-height: 455px) {
+    .section-system {
+        height: 700px !important;
+    }
+}
+
+@media (max-width: 364px) {
+    .characteristics-grid {
+        width: 100% !important;
+    }
+    .characteristics-grid {
+        padding-top: 40px !important;
+    }
+    .section-system {
+        height: 1250px !important;
+    }
+
+    #protest {
+        height: 700px !important;
+    }
+    #immobile {
+        height: 750px !important;
+    }
+    #tdjp {
+        height: 600px !important;
+    }
+    #notes {
+        height: 450px !important;
+    }
+    #ged {
+        height: 400px !important;
+    }
+    #distributor {
+        height: 350px !important;
+    }
+    
+}

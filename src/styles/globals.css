@@ -5,10 +5,14 @@
 
 @import "../styles/Home/styles.module.css";
 @import "../styles/AboutUs/styles.module.css";
+@import "../styles/Systems/styles.module.css";
 
 @import "../styles/Footer/style.module.css";
 
-/* width */
+* {
+    scroll-behavior: smooth !important;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
     border: 2px solid #000;
@@ -16,13 +20,13 @@
     z-index: 1 !important;
 }
 
-/* Track */
+
 ::-webkit-scrollbar-track {
     background: #fff;
     z-index: 1 !important;
 }
 
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
     background: #02B3EE;
     border-radius: 50px;
