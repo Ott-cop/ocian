@@ -150,6 +150,13 @@
     }
 }
 
+@media (max-width: 411px) {
+    #system-paragraph {
+        width: 300px !important;
+    }
+}
+
+
 @media (max-width: 364px) {
     .characteristics-grid {
         width: 100% !important;
@@ -180,4 +187,10 @@
         height: 350px !important;
     }
     
+}
+
+@media (max-width: 343px) {
+    #system-paragraph {
+        width: 250px !important;
+    }
 }
