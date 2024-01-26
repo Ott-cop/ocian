@@ -1,0 +1,37 @@
+@media (max-width: 1630px) {
+    .contact-alignment {
+        flex-wrap: wrap;
+    }
+    .contact-section {
+        height: 1800px !important;
+    }
+}
+
+
+@media (max-width: 723px) {
+
+    .contact-form {
+        width: 500px !important;
+    }
+}
+
+@media (max-width: 537px) {
+
+    .contact-form {
+        width: 400px !important;
+    }
+}
+
+@media (max-width: 411px) {
+
+    .contact-form {
+        width: 300px !important;
+    }
+}
+
+@media (max-width: 305px) {
+
+    .contact-form {
+        width: 250px !important;
+    }
+}

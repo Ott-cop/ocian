@@ -65,34 +65,44 @@ export default function Header() {
                             </Link>
                         </li>
                         <li>
-                            <Link href={"/"}>
+                            <Link href={"/contact"}>
                                 <ItemMenu name={"Contato"}></ItemMenu>
                             </Link>
                         </li>
                     </ul>
-                    <button className="contact change-icon-menu flex items-center justify-center gap-3 bg-primary-color hover:bg-transparent rounded-[30px] h-12 pl-6 pr-6 border-solid border-2 border-primary-color hover:border-primary-color duration-300">
-                            <i className='change-text-menu' style={{fontSize: "20px", color: "white"}}><FontAwesomeIcon icon={faHeadset}></FontAwesomeIcon></i>
-                            <span className="change-text-menu font-black tracking-wider text-[17px]">SUPORTE</span>
-                    </button>
+                    <Link href={"/support"}>
+                        <button className="contact change-icon-menu flex items-center justify-center gap-3 bg-primary-color hover:bg-transparent rounded-[30px] h-12 pl-6 pr-6 border-solid border-2 border-primary-color hover:border-primary-color duration-300">
+                                <i className='change-text-menu' style={{fontSize: "20px", color: "white"}}><FontAwesomeIcon icon={faHeadset}></FontAwesomeIcon></i>
+                                <span className="change-text-menu font-black tracking-wider text-[17px]">SUPORTE</span>
+                        </button>
+                    </Link>
                 </div>
                 
             </div>
         </header>
     <div className={`container-menu flex-1 z-40 fixed items-center w-full m-0 pb-[10px] justify-center transition-all flex duration-700 ${isVisible ? '!flex' : '!hidden'}`}>
-        <nav className='flex flex-col gap-4'>
+        <nav className='flex flex-col gap-8'>
             <i className="hamburguer transition-all duration-700" onClick={() => setMenuIsVisible(false)}><FontAwesomeIcon icon={faXmark} style={{color: "#02b3ee", fontSize: "20px"}}></FontAwesomeIcon></i>
-            <Link href={"/"}>
+            
+            <Link href={"/"} className='justify-center flex'>
                 <ItemMenu name={"Home"} />
             </Link>
-            <Link href={"/about-us"}>
+            <Link href={"/about-us"} className='justify-center flex'>
                 <ItemMenu name={"Quem Somos"} />
             </Link>
-            <Link href={"/system"}>
+            <Link href={"/system"} className='justify-center flex'>
                 <ItemMenu name={"Sistemas"} />
             </Link>
-            <Link href={"/"}>
+            <Link href={"/contact"} className='justify-center flex'>
                 <ItemMenu name={"Contato"} />
             </Link>
+            <Link href={"/support"} className='justify-center flex'>
+            <button className="change-icon-menu flex items-center justify-center gap-3 bg-primary-color hover:bg-transparent rounded-[30px] h-12 pl-6 pr-6 border-solid border-2 border-primary-color hover:border-primary-color duration-300">
+                    <i className='change-text-menu' style={{fontSize: "20px", color: "white"}}><FontAwesomeIcon icon={faHeadset}></FontAwesomeIcon></i>
+                    <span className="change-text-menu font-black tracking-wider text-[17px]">SUPORTE</span>
+            </button>
+            </Link>
+            
         </nav>
     </div>
     <i className="hamburguer flex fixed" onClick={() => setMenuIsVisible(true)}><FontAwesomeIcon icon={faBars} style={{color: "#02b3ee", fontSize: "20px"}}></FontAwesomeIcon></i>
