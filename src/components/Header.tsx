@@ -18,7 +18,6 @@ export default function Header() {
         } else if (window.scrollY === 0) {
             setisScroll(false);
         }
-        console.log(window.scrollY);
     }
 
     useEffect(() => {

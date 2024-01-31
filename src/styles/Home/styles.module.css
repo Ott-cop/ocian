@@ -64,17 +64,24 @@
     -webkit-backdrop-filter: blur(10px);
 }
 
+.contact-message {
+    line-height: 20px !important;
+    color: red;
+}
+
 .input {
     outline: none;
     border-radius: 5px;
     padding: 5px;
     width: 100%;
     background-color: transparent;
-
     font-size: 20px;
 }
 
-
+.input-error {
+    border: solid 2px rgba(255, 0, 0, 0.493) !important;
+    transition: all .5s;
+}
 
 .input-group {
     display: flex;
@@ -82,7 +89,9 @@
     gap: 6px;
     align-items: center;
     background-color: rgba(222, 240, 252, 1);
+    border: solid 2px rgba(255, 0, 0, 0);
     border-radius: 10px;
+    transition: all .5s;
 }
 
 

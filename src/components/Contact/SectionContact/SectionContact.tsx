@@ -2,8 +2,35 @@ import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import { faEnvelope, faMailBulk, faPhone, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+
+import { z } from "zod";
+
+
 
 export default function SectionContact() {
+    const schema = z.object({
+        name: z.string().min(6, 'O campo nome precisa ter no minímo 6 caracteres'),
+        email: z.string().min(8, 'O campo precisa ter no minímo 8 caracteres'),
+        phone: z.string().min(8, 'O campo precisa ter no minímo 8 caracteres'),
+        subject: z.string().min(6, 'O campo precisa ter no minímo 6 caracteres'),
+        message: z.string().min(6, 'O campo precisa ter no minímo 6 caracteres'),
+    });
+
+    type FormProps = z.infer<typeof schema>;
+
+
+   
+    const { register, handleSubmit, formState: { errors } } = useForm<FormProps>({
+        mode: 'all',
+        resolver: zodResolver(schema)
+    });
+
+    const handleForms = (data: FormProps) => {
+        console.log(data);
+    }
+    console.log('errors', errors);
     return(
         <>
         <section className="contact-section flex flex-1 w-full h-[100vh] background-ContactBanner-overlay bg-no-repeat bg-cover">
@@ -15,30 +42,34 @@ export default function SectionContact() {
                             <p className="paragraph-contact text-black text-[20px] mb-10">Preencha o formulário abaixo para nos enviar um e-mail ou entre em contato pelo telefone<br/><span className="font-semibold"> (14) 3642-0700</span></p>
                             <div className="flex justify-center">
                                 <div className="px-[15px] w-[655px] justify-center py-5 rounded-[20px]" style={{boxShadow: "0 25px 50px 12px rgb(0 0 0 / 0.25)"}}>
-                                    <form className="grid grid-cols-1 gap-3 mb-6">
-                                        <div className="form-contact grid grid-cols-3 gap-3">                                
-                                            <div className="input-group">
+                                    <form className="grid grid-cols-1 gap-3 mb-6" onSubmit={handleSubmit(handleForms)}>
+                                        <div className="form-contact grid grid-cols-3 gap-3">
+                                            <div className={`input-group ${errors.name?.message ? 'input-error' : '' }`}>                       
                                                 <i className="ml-3 text-primary-color"><FontAwesomeIcon icon={faUser}></FontAwesomeIcon></i>
-                                                <input className="input" type="text" id="fname" placeholder="Seu nome" />
+                                                <input className="input" type="text" id="fname" placeholder="Seu nome" {... register("name")} />   
                                             </div>
-                                            <div className="input-group">
+                                            <div className={`input-group ${errors.email?.message ? 'input-error' : '' }`}>
                                                 <i className="ml-3 text-primary-color"><FontAwesomeIcon icon={faEnvelope}></FontAwesomeIcon></i>
-                                                <input className="input" type="email" id="femail" placeholder="Seu email" />
+                                                <input className="input" type="email" id="femail" placeholder="Seu email" {... register("email")} />
                                             </div>
-                                            <div className="input-group">
+                                            <div className={`input-group ${errors.phone?.message ? 'input-error' : '' }`}>
                                                 <i className="ml-3 text-primary-color"><FontAwesomeIcon icon={faPhone}></FontAwesomeIcon></i>
-                                                <input className="input" type="phone" id="fphone" placeholder="Telefone" />
+                                                <input className="input" type="phone" id="fphone" placeholder="Telefone" {... register("phone")} />
                                             </div>
                                         </div>
                                         <div className="grid gap-3">
-                                            <div className="input-group">            
-                                                <input className="input ml-3" type="text" id="fsubject" placeholder="Assunto a tratar" />
+                                            <div className={`input-group ${errors.subject?.message ? 'input-error' : '' }`}>            
+                                                <input className="input ml-3" type="text" id="fsubject" placeholder="Assunto a tratar" {... register("subject")} />
                                             </div>
-                                            <div className="input-group">
-                                                <textarea className="input ml-3" id="fmessage" rows={6} maxLength={500} placeholder="Sua mensagem bemmmm detalhada" />
+                                            <div className={`input-group ${errors.message?.message ? 'input-error' : '' }`}>
+                                                <textarea className="input ml-3" id="fmessage" rows={6} maxLength={500} placeholder="Sua mensagem bemmmm detalhada" {... register("message")} />
                                             </div>
                                         </div>
-
+                                        {errors.name?.message && (<p className="contact-message">* {errors.name.message}</p>)}
+                                        {errors.email?.message && (<p className="contact-message">* {errors.email.message}</p>)}
+                                        {errors.phone?.message && (<p className="contact-message">* {errors.phone.message}</p>)}
+                                        {errors.subject?.message && (<p className="contact-message">* {errors.subject.message}</p>)}
+                                        {errors.message?.message && (<p className="contact-message">* {errors.message.message}</p>)}
                                     </form>
                                     <div className="flex w-full justify-center">
                                         <Button>ENVIAR</Button>
