@@ -11,23 +11,6 @@
     background:linear-gradient(to bottom, rgba(230, 243, 252, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(230, 243, 252, 1)), url("../../assets/pages/Home/SectionContact/SectionContactBanner.jpeg");
 }
 
-.link-underline {
-    border-bottom-width: 0;
-    background-image: linear-gradient(transparent, transparent), linear-gradient(#02B3EE, #02B3EE);
-    background-size: 0 12px;
-    background-position: 40% 160%;
-    background-repeat: no-repeat;
-    transition: all .5s;
-}
-
-.link-underline:hover {
-    color: rgb(0 255 255 / var(--tw-text-opacity));
-    transition: all .5s;
-    background-size: 90% 12px;
-    background-position: 40% 160%
-}
-
-
 
 .change-color .icon {
     transition: all .5s;
@@ -60,8 +43,6 @@
 .form {
     background: rgb(222, 240, 252, 0.5);
     transition: all .5s;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
 }
 
 .contact-message {
@@ -137,9 +118,6 @@
     }
     .section-differential {
         height: 700px !important;
-    }
-    .section-contact {
-        height: 800px !important;
     }
 }
 
@@ -242,7 +220,7 @@
     }
 
     .section-contact {
-        height: 850px !important;
+        height: 1050px !important;
     }
 
     .benefits {
@@ -270,6 +248,9 @@
     .form-contact {
         grid-template-columns: 100% !important;
     }
+    .section-contact {
+        height: 1300px !important;
+    }
 }
 
 @media (max-width: 364px) {
@@ -296,9 +277,6 @@
     }
     .section-differential {
         height: 950px !important;
-    }
-    .section-contact {
-        height: 900px !important;
     }
     
 }

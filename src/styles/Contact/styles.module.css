@@ -27,11 +27,19 @@
     .contact-form {
         width: 300px !important;
     }
+
+    .contact-section {
+        height: 2200px !important;
+    }
 }
 
 @media (max-width: 305px) {
 
     .contact-form {
         width: 250px !important;
+    }
+
+    .contact-section {
+        height: 2300px !important;
     }
 }

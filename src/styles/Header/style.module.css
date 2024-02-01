@@ -6,6 +6,22 @@
     
 }
 
+.link-underline {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#02B3EE, #02B3EE);
+    background-size: 0 12px;
+    background-position: 40% 160%;
+    background-repeat: no-repeat;
+    transition: all .5s;
+}
+
+.link-underline:hover {
+    color: rgb(0 255 255 / var(--tw-text-opacity));
+    transition: all .5s;
+    background-size: 90% 12px;
+    background-position: 40% 160%
+}
+
 .change-icon-menu .change-text-menu {
     transition: all .5s;
     color: white !important;

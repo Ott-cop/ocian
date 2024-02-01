@@ -27,15 +27,6 @@ export default function Header() {
         }
     }, []);
 
-    const scrollTo = (id: string) => {
-        var my_element = document.getElementById(id);
-        setMenuIsVisible(false);
-        my_element?.scrollIntoView({
-        block: "start",
-        inline: "nearest"
-        });
-    }
-
     return(
         <>
         <header className={`flex flex-1 z-40 fixed items-center w-full m-0 pb-[10px] justify-center duration-500 ${isScroll ? 'header-scrolled' : ''}`}>
