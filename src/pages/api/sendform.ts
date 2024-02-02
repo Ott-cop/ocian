@@ -7,7 +7,7 @@ type Form = {
 }
 
 export default async function SendForm({name, email, phone, subject, message}: Form) {
-    const response = fetch("https://ocian-backend.onrender.com/send_support", {
+    const response = await fetch("https://ocian-backend.onrender.com/send_support", {
         mode: 'cors',
         method: 'POST',
         headers: {
