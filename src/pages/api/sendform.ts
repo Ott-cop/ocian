@@ -12,7 +12,7 @@ export default async function SendForm({name, email, phone, subject, message}: F
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'
+            // 'Access-Control-Allow-Origin': '*'
         },
         body: JSON.stringify({
             "name": name,
