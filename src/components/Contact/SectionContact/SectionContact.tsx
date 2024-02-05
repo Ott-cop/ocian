@@ -39,7 +39,7 @@ export default function SectionContact() {
             let subject_value = document.getElementById("fsubject") as HTMLInputElement;
             let message_value = document.getElementById("fmessage") as HTMLInputElement;
             console.log(name_value.value, email_value.value, phone_value.value, subject_value.value, message_value.value);
-            SendForm({form: "send_contact_us", name: name_value.value, email: email_value.value, phone: phone_value.value, subject: subject_value.value, message: message_value.value});
+            SendForm({form: "send_contact_us", name: name_value, email: email_value, phone: phone_value, subject: subject_value, message: message_value});
         }
 
         return(
