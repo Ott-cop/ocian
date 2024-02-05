@@ -44,7 +44,7 @@ export default function SectionContact() {
 
         return(
             <>
-                <form className="grid grid-cols-1 gap-3 mb-6" onSubmit={handleSubmit(handleForms)}>
+                <form id="grid1" className="grid grid-cols-1 gap-3 mb-6" onSubmit={handleSubmit(handleForms)}>
                     <div className="form-contact grid grid-cols-3 gap-3">
                         <div className={`input-group ${errors.name?.message ? 'input-error' : '' }`}>                       
                             <i className="ml-3 text-primary-color"><FontAwesomeIcon icon={faUser}></FontAwesomeIcon></i>
@@ -103,7 +103,7 @@ export default function SectionContact() {
 
         return(
             <>
-                <form className="grid grid-cols-1 gap-3 mb-6" onSubmit={handleSubmit(handleForms)}>
+                <form id="grid2" className="grid grid-cols-1 gap-3 mb-6" onSubmit={handleSubmit(handleForms)}>
                     <div className="form-contact grid grid-cols-3 gap-3">                                
                         <div className={`input-group ${errors.name?.message ? 'input-error' : '' }`}>
                             <i className="ml-3 text-primary-color"><FontAwesomeIcon icon={faUser}></FontAwesomeIcon></i>
@@ -119,7 +119,7 @@ export default function SectionContact() {
                         </div>
                     </div>
                     <div className="grid gap-3">
-                        <div id="formzin" className={`input-group`}>         
+                        <div>         
                             <input className="input ml-3" name="arquivo" type="file" accept=".pdf, .doc, .docx" id="f2file" size={20} style={{color:  "#9CA3AF"}} />
                         </div>
                         <div className={`input-group ${errors.message?.message ? 'input-error' : '' }`}>
@@ -142,10 +142,10 @@ export default function SectionContact() {
 
     return(
         <>
-        <section className="contact-section items-center flex flex-1 w-full h-[1200px] background-ContactBanner-overlay bg-no-repeat bg-cover">
+        <section className="contact-section flex flex-1 w-full h-[1200px] background-ContactBanner-overlay bg-no-repeat bg-cover">
             <Container>
                 <div className="flex w-full justify-center hiddenable">
-                    <div className="contact-alignment justify-center flex gap-[100px] w-full text-center mt-[00px]">
+                    <div className="contact-alignment justify-center flex gap-[10px] w-full text-center mt-[200px]">
                         <div className="contact-form">
                             <h2 className="title-contact text-black text-[40px] font-medium mb-2">FALE CONOSCO</h2>
                             <p className="paragraph-contact text-black text-[20px] mb-10">Preencha o formulário abaixo para nos enviar um e-mail ou entre em contato pelo telefone<br/><span className="font-semibold"> (14) 3642-0700</span></p>
