@@ -39,12 +39,12 @@ export default function SectionContact() {
         let subject_value = document.getElementById("fsubject") as HTMLInputElement;
         let message_value = document.getElementById("fmessage") as HTMLInputElement;
         console.log(name_value.value, email_value.value, phone_value.value, subject_value.value, message_value.value);
-        SendForm({name: name_value.value, email: email_value.value, phone: phone_value.value, subject: subject_value.value, message: message_value.value});
+        SendForm({form: "send_proposal", name: name_value.value, email: email_value.value, phone: phone_value.value, subject: subject_value.value, message: message_value.value});
     }
     
     return(
         <>
-        <section className="section-contact flex flex-1 w-full h-[1200px] background-ContactBanner-overlay bg-no-repeat bg-cover">
+        <section className="section-contact flex flex-1 w-full h-[1400px] background-ContactBanner-overlay bg-no-repeat bg-cover">
             <Container>
                 <div className="flex w-full justify-center hiddenable">
                     <div className="w-full text-center mt-[200px]">

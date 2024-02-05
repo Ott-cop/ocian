@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 @import "../styles/Header/style.module.css";
 
 @import "../styles/Home/styles.module.css";
@@ -42,4 +46,29 @@
 .show {
     opacity: 1;
     transition: all 2s;
+}
+
+.button-style {
+    background-color: transparent;
+    font-weight: 600;
+    color: rgb(2 179 238);
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 08px;
+    padding-bottom: 08px;
+    border: 2px solid rgb(2 179 238);
+    border-radius: 50px;
+    transition: all .5s;
+}
+
+.button-style:hover {
+    background-color: rgb(2 179 238);
+    color: white;
+    transition: all .5s;
+}
+
+.popup-text {
+    font-family: 'Barlow Condensed', sans-serif !important;
+    font-weight: 500 !important;
+    color: black;
 }
