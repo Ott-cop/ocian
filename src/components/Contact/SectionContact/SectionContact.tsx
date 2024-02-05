@@ -145,7 +145,7 @@ export default function SectionContact() {
         <section className="contact-section flex flex-1 w-full h-[1200px] background-ContactBanner-overlay bg-no-repeat bg-cover">
             <Container>
                 <div className="flex w-full justify-center hiddenable">
-                    <div className="contact-alignment justify-center flex gap-[10px] w-full text-center mt-[200px]">
+                    <div className="contact-alignment justify-center flex gap-[100px] w-full text-center mt-[200px]">
                         <div className="contact-form">
                             <h2 className="title-contact text-black text-[40px] font-medium mb-2">FALE CONOSCO</h2>
                             <p className="paragraph-contact text-black text-[20px] mb-10">Preencha o formulário abaixo para nos enviar um e-mail ou entre em contato pelo telefone<br/><span className="font-semibold"> (14) 3642-0700</span></p>
