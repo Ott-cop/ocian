@@ -44,7 +44,7 @@ export default function SectionContact() {
     
     return(
         <>
-        <section className="section-contact flex flex-1 w-full h-[1400px] background-ContactBanner-overlay bg-no-repeat bg-cover">
+        <section className="section-contact flex flex-1 w-full h-[1100px] background-ContactBanner-overlay bg-no-repeat bg-cover">
             <Container>
                 <div className="flex w-full justify-center hiddenable">
                     <div className="w-full text-center mt-[200px]">
