@@ -17,7 +17,7 @@ export default async function SendForm({form, name, email, phone, subject, messa
     Swal.fire({
         title: "Em processamento...",
         buttonsStyling: false,
-        confirmButtonText: "Fechar",
+        confirmButtonText: "FECHAR",
         customClass: {
             confirmButton: "button-style",
             title: "popup-text",
@@ -44,7 +44,7 @@ export default async function SendForm({form, name, email, phone, subject, messa
 
             if (response.status === 200) {
                 Swal.update({icon: "success", title: "Seu formulário foi enviado com sucesso!"});
-                
+
                 name.value = "";
                 email.value = "";
                 phone.value = "";
