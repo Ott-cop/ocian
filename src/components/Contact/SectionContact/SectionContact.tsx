@@ -1,6 +1,7 @@
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import SendForm from "@/pages/api/sendform";
+import SendFormCurriculum from "@/pages/api/sendformcurriculum";
 import { faEnvelope, faMailBulk, faPhone, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -85,7 +86,7 @@ export default function SectionContact() {
             name: z.string().min(6, 'O campo nome precisa ter no minímo 6 caracteres').max(50, 'O campo precisa ter no máximo 50 caracteres'),
             email: z.string().min(8, 'O campo precisa ter no minímo 8 caracteres').max(50, 'O campo precisa ter no máximo 50 caracteres'),
             phone: z.string().min(8, 'O campo precisa ter no minímo 8 caracteres').max(20, 'O campo precisa ter no máximo 20 caracteres'),
-            subject: z.string().min(6, 'O campo precisa ter no minímo 6 caracteres').max(50, 'O campo precisa ter no máximo 50 caracteres'),
+            // subject: z.string().min(6, 'O campo precisa ter no minímo 6 caracteres').max(50, 'O campo precisa ter no máximo 50 caracteres'),
             message: z.string().min(6, 'O campo precisa ter no minímo 6 caracteres').max(500, 'O campo precisa ter no máximo 500 caracteres'),
         });
     
@@ -100,6 +101,17 @@ export default function SectionContact() {
         const handleForms = (data: FormProps) => {
             console.log(data);
         }
+
+        const submitWorkWithUs = () => {
+            let name_value = document.getElementById("f2name") as HTMLInputElement;
+            let email_value = document.getElementById("f2email") as HTMLInputElement;
+            let phone_value = document.getElementById("f2phone") as HTMLInputElement;
+            let file_value = document.getElementById("f2file") as HTMLInputElement;
+            let message_value = document.getElementById("f2message") as HTMLInputElement;
+
+            SendFormCurriculum({form: "send_work_with_us", name: name_value, email: email_value, phone: phone_value, file: file_value, message: message_value});
+        };
+        
 
         return(
             <>
@@ -120,7 +132,7 @@ export default function SectionContact() {
                     </div>
                     <div className="grid gap-3">
                         <div>         
-                            <input className="input ml-3" name="arquivo" type="file" accept=".pdf, .doc, .docx" id="f2file" size={20} style={{color:  "#9CA3AF"}} />
+                            <input className="input ml-3" name="file" type="file" accept=".pdf, .doc, .docx" id="f2file" size={20} style={{color:  "#9CA3AF"}} />
                         </div>
                         <div className={`input-group ${errors.message?.message ? 'input-error' : '' }`}>
                             <textarea className="input ml-3" id="f2message" rows={6} maxLength={500} placeholder="Seu comentário bemmm legal" {... register("message")} />
@@ -129,11 +141,10 @@ export default function SectionContact() {
                     {errors.name?.message && (<p className="contact-message">* {errors.name.message}</p>)}
                     {errors.email?.message && (<p className="contact-message">* {errors.email.message}</p>)}
                     {errors.phone?.message && (<p className="contact-message">* {errors.phone.message}</p>)}
-                    {errors.subject?.message && (<p className="contact-message">* {errors.subject.message}</p>)}
                     {errors.message?.message && (<p className="contact-message">* {errors.message.message}</p>)}
                 </form>
                 <div className="flex w-full justify-center">
-                    <Button>ENVIAR</Button>
+                    <Button click={submitWorkWithUs}>ENVIAR</Button>
                 </div>   
             </>
         );

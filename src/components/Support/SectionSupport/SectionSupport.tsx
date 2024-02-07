@@ -26,10 +26,6 @@ export default function SectionSupport() {
         resolver: zodResolver(schema)
     });
 
-
-    const handleForms = (data: FormProps) => {
-        console.log(data);
-    }
     const submit_support = () => {
         console.log("Cliquei!");
         let name_value = document.getElementById("fname") as HTMLInputElement;
@@ -84,11 +80,8 @@ export default function SectionSupport() {
                                 <div className="flex w-full justify-center">
                                     <Button click={submit_support}>ENVIAR</Button>
                                 </div>
-                                
                             </div>
-
                         </div>
-
                     </div>
                 </div>
             </Container>
