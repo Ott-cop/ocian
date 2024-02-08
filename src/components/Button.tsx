@@ -1,4 +1,4 @@
-import {ButtonHTMLAttributes, DetailedHTMLProps, HTMLAttributes, MouseEventHandler, ReactNode} from "react"
+import {MouseEventHandler, ReactNode} from "react"
 
 type Props = {
     children: ReactNode,
@@ -8,7 +8,7 @@ type Props = {
 export function Button({children, click} : Props) {
     return(
         <div>
-            <button onClick={click} className="button button-style">
+            <button  onClick={click} className="button button-style">
                 {children}
             </button>
         </div>

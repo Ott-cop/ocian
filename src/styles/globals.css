@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import "../styles/Header/style.module.css";
+@import "../styles/ReturnToTop/style.module.css";
 
 @import "../styles/Home/styles.module.css";
 @import "../styles/AboutUs/styles.module.css";
@@ -13,9 +14,6 @@
 @import "../styles/Footer/style.module.css";
 @import "../styles/fonts.module.css";
 
-* {
-    scroll-behavior: smooth !important;
-}
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -72,9 +70,6 @@
     color: black;
 }
 
-.containerzin {
-    margin: 0px !important;
-}
 body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) {
     padding-right: 0px !important;
 }

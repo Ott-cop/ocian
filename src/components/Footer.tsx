@@ -11,11 +11,7 @@ export default function Footer() {
                         <Image src={Logo} alt="Ocian Logo" style={{width: "100px"}}></Image>
                     </div>
                     <span className="text-[20px]">Todos os direitos reservados &copy;<span className="text-primary-color">Ocian</span></span>
-                    
-                </div>
-                
-                
-                  
+                </div>        
             </div>
         </footer>
     );

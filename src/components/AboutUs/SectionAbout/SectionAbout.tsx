@@ -6,10 +6,10 @@ import "@/styles/AboutUs/styles.module.css";
 export default function SectionAbout() {
     return (
         <>
-        <section className="section-about flex w-full h-[100vh] bg-[#E6F3FC]">
+        <section className="section-about flex w-full py-[100px] items-center bg-[#E6F3FC]">
             <Container>
-                <div className="flex justify-center w-full">
-                    <div className="align-contents w-full justify-center flex mt-[200px]">
+                <div className="flex justify-center w-full items-center">
+                    <div className="align-contents w-full justify-center flex ">
                         <div className="flex justify-center mb-9">
                             <div className="text-width-AboutUs hiddenable">
                                 <div className="w-full justify-center">

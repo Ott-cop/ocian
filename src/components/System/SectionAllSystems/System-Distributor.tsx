@@ -15,7 +15,7 @@ type Props = {
 export default function SystemDistributor({ title, paragraph }: Props) {
     return (
         <>
-        <section id="Distribuidor" className="section-system flex flex-1 w-full h-[100vh] background-DifferentialBanner-overlay bg-no-repeat bg-cover">
+        <section id="Distribuidor" className="section-system flex flex-1 w-full background-SystemBannerRight-overlay bg-no-repeat bg-cover">
             <Container>
                 <div className="system-section flex w-full justify-start hiddenable">
                     <div className="flex-1 max-w-full w-full mt-[100px] justify-center">                  

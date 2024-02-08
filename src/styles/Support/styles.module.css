@@ -2,12 +2,6 @@
     background:linear-gradient(to bottom, rgba(230, 243, 252, 1), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(230, 243, 252, 1)), url("../../assets/pages/Home/SectionDifferential/SectionDifferencialBanner.jpg");
 }
 
-.form-support {
-    background: rgb(222, 240, 252, 0.5);
-    transition: all .5s;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-}
 
 
 @media (max-width: 1339px) {
@@ -16,12 +10,11 @@
         text-align: center !important;
     }
     .section-support {
-        height: 1200px !important;
+        padding-bottom: 200px !important;
     }
     .teamviewer {
         display: flex !important;
         justify-content: center !important;
-
     }
 }
 
@@ -29,13 +22,14 @@
     .form-support {
         height: 350px !important;
     }
+
+    .section-support {
+        padding-bottom: 100px !important;
+    }
 }
 
 @media (max-width: 411px) {
     .form-support {
         height: 450px !important;
-    }
-    .section-support {
-        height: 1350px !important;
     }
 }

@@ -15,7 +15,7 @@ type Props = {
 export default function SystemProtest({ title, paragraph }: Props) {
     return (
         <>
-        <section id="Protesto" className="section-system flex flex-1 w-full h-[100vh] background-DifferentialBanner-overlay bg-no-repeat bg-cover">
+        <section id="Protesto" className="section-system flex flex-1 w-full background-SystemBannerLeft-overlay bg-no-repeat bg-cover">
             <Container>
                 <div className="system-section flex w-full justify-start hiddenable">
                     <div className="flex-1 max-w-full w-full mt-[100px] justify-center">                  

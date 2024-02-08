@@ -2,6 +2,8 @@ import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import SendForm from "@/pages/api/sendform";
 import SendFormCurriculum from "@/pages/api/sendformcurriculum";
+import SwalResponseForm from "@/pages/api/swalresponse";
+import Validate from "@/pages/api/validate";
 import { faEnvelope, faMailBulk, faPhone, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -39,7 +41,13 @@ export default function SectionContact() {
             let phone_value = document.getElementById("fphone") as HTMLInputElement;
             let subject_value = document.getElementById("fsubject") as HTMLInputElement;
             let message_value = document.getElementById("fmessage") as HTMLInputElement;
-            console.log(name_value.value, email_value.value, phone_value.value, subject_value.value, message_value.value);
+            
+            let validate = Validate(name_value.value, errors.name?.message, email_value.value, errors.email?.message, phone_value.value, errors.phone?.message, subject_value.value, errors.subject?.message, message_value.value, errors.message?.message);
+
+            if (validate == false) {
+                return SwalResponseForm();
+            }
+
             SendForm({form: "send_contact_us", name: name_value, email: email_value, phone: phone_value, subject: subject_value, message: message_value});
         }
 
@@ -65,7 +73,7 @@ export default function SectionContact() {
                             <input className="input ml-3" type="text" id="fsubject" placeholder="Assunto a tratar" {... register("subject")} />
                         </div>
                         <div className={`input-group ${errors.message?.message ? 'input-error' : '' }`}>
-                            <textarea className="input ml-3" id="fmessage" rows={6} maxLength={500} placeholder="Sua mensagem bemmmm detalhada" {... register("message")} />
+                            <textarea className="input ml-3" id="fmessage" rows={6} maxLength={500} placeholder="Digite sua mensagem aqui" {... register("message")} />
                         </div>
                     </div>
                     {errors.name?.message && (<p className="contact-message">* {errors.name.message}</p>)}
@@ -86,7 +94,6 @@ export default function SectionContact() {
             name: z.string().min(6, 'O campo nome precisa ter no minímo 6 caracteres').max(50, 'O campo precisa ter no máximo 50 caracteres'),
             email: z.string().min(8, 'O campo precisa ter no minímo 8 caracteres').max(50, 'O campo precisa ter no máximo 50 caracteres'),
             phone: z.string().min(8, 'O campo precisa ter no minímo 8 caracteres').max(20, 'O campo precisa ter no máximo 20 caracteres'),
-            // subject: z.string().min(6, 'O campo precisa ter no minímo 6 caracteres').max(50, 'O campo precisa ter no máximo 50 caracteres'),
             message: z.string().min(6, 'O campo precisa ter no minímo 6 caracteres').max(500, 'O campo precisa ter no máximo 500 caracteres'),
         });
     
@@ -109,6 +116,12 @@ export default function SectionContact() {
             let file_value = document.getElementById("f2file") as HTMLInputElement;
             let message_value = document.getElementById("f2message") as HTMLInputElement;
 
+            let validate = Validate(name_value.value, errors.name?.message, email_value.value, errors.email?.message, phone_value.value, errors.phone?.message, file_value.value, undefined, message_value.value, errors.message?.message);
+
+            if (validate == false) {
+                return SwalResponseForm();
+            }
+            
             SendFormCurriculum({form: "send_work_with_us", name: name_value, email: email_value, phone: phone_value, file: file_value, message: message_value});
         };
         
@@ -135,7 +148,7 @@ export default function SectionContact() {
                             <input className="input ml-3" name="file" type="file" accept=".pdf, .doc, .docx" id="f2file" size={20} style={{color:  "#9CA3AF"}} />
                         </div>
                         <div className={`input-group ${errors.message?.message ? 'input-error' : '' }`}>
-                            <textarea className="input ml-3" id="f2message" rows={6} maxLength={500} placeholder="Seu comentário bemmm legal" {... register("message")} />
+                            <textarea className="input ml-3" id="f2message" rows={6} maxLength={500} placeholder="Explique sobre você" {... register("message")} />
                         </div>
                     </div>
                     {errors.name?.message && (<p className="contact-message">* {errors.name.message}</p>)}
@@ -156,19 +169,19 @@ export default function SectionContact() {
         <section className="contact-section flex flex-1 w-full h-[1200px] background-ContactBanner-overlay bg-no-repeat bg-cover">
             <Container>
                 <div className="flex w-full justify-center hiddenable">
-                    <div className="contact-alignment justify-center flex gap-[100px] w-full text-center mt-[200px]">
+                    <div className="contact-alignment justify-center flex gap-[100px] items-center w-full text-center">
                         <div className="contact-form">
-                            <h2 className="title-contact text-black text-[40px] font-medium mb-2">FALE CONOSCO</h2>
-                            <p className="paragraph-contact text-black text-[20px] mb-10">Preencha o formulário abaixo para nos enviar um e-mail ou entre em contato pelo telefone<br/><span className="font-semibold"> (14) 3642-0700</span></p>
+                            <h2 className="title-contact text-black text-[40px] font-medium mb-2"><span className="text-primary-color">FALE</span> CONOSCO</h2>
+                            <p className="paragraph-contact text-black text-[20px] mb-10">Preencha o formulário abaixo para nos enviar um e-mail ou entre em contato pelo telefone<br/><span className="font-semibold text-primary-color"> (14) 3642-0700</span></p>
                             <div className="flex justify-center">
                                 <div className="form px-[15px] w-[655px] justify-center py-5 rounded-[20px]" style={{boxShadow: "0 25px 50px 12px rgb(0 0 0 / 0.25)"}}>
                                     <Form1></Form1>
                                 </div>
                             </div>
                         </div>
-                        <div className="contact-form ">
-                            <h2 className="title-contact text-black text-[40px] font-medium mb-2">TRABALHE CONOSCO</h2>
-                            <p className="paragraph-contact text-black text-[20px] mb-10">Venha fazer parte desta equipe que trabalha para potencializar o sistema cartorário paulista. Seja um <span className="font-semibold">colaborador.</span></p>
+                        <div className="contact-form">
+                            <h2 className="title-contact text-black text-[40px] font-medium mb-2"><span className="text-primary-color">TRABALHE</span> CONOSCO</h2>
+                            <p className="paragraph-contact text-black text-[20px] mb-10">Venha fazer parte desta equipe que trabalha para potencializar o sistema cartorário paulista. Seja um <span className="font-semibold text-primary-color">colaborador.</span></p>
                             <div className="flex justify-center">
                                 <div className="form px-[15px] w-[655px] justify-center py-5 rounded-[20px]" style={{boxShadow: "0 25px 50px 12px rgb(0 0 0 / 0.25)"}}>
                                     <Form2></Form2>

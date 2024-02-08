@@ -6,7 +6,7 @@ import { faAnglesUp, faCloud, faCloudArrowDown, faHandHoldingDollar, faHandPoint
 export default function SectionDifferential() {
     return (
         <>
-        <section className="section-differential flex flex-1 w-full h-[100vh] background-DifferentialBanner-overlay bg-no-repeat bg-cover">
+        <section className="section-differential flex flex-1 w-full pb-[50px] background-DifferentialBanner-overlay bg-no-repeat bg-cover">
             <Container>
                 <div className="differential-section flex w-full justify-start hiddenable">
                     <div className="flex-1 max-w-[620px] w-full mt-[100px] justify-center">
@@ -28,15 +28,8 @@ export default function SectionDifferential() {
                                 </div>
                             </div>
                         </div>
-
-                        
-  
-
-   
                     </div>
-
                 </div>
-
             </Container>
         </section>
         </>

@@ -2,9 +2,11 @@
 @media (max-width: 1630px) {
     .contact-alignment {
         flex-wrap: wrap;
+        gap: 0px !important;
     }
     .contact-section {
-        height: 1800px !important;
+        height: 1500px !important;
+        padding-bottom: 100px !important;
     }
 }
 
@@ -13,6 +15,9 @@
 
     .contact-form {
         width: 500px !important;
+    }
+    .contact-section {
+        height: 1300px !important;
     }
 }
 
@@ -30,7 +35,7 @@
     }
 
     .contact-section {
-        height: 2200px !important;
+        height: 1600px !important;
     }
 }
 

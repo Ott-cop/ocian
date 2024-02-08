@@ -5,7 +5,7 @@ import { ItemMenu } from './ItemMenu'
 import "@/styles/Header/style.module.css"
 import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faHeadset, faXmark } from '@fortawesome/free-solid-svg-icons'
+import {faBars, faHeadset, faXmark } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function Header() {
@@ -20,6 +20,11 @@ export default function Header() {
         }
     }
 
+    const closeinmenu = () => {
+        setMenuIsVisible(false);
+    };
+
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => {
@@ -30,7 +35,7 @@ export default function Header() {
     return(
         <>
         <header className={`flex flex-1 z-40 fixed items-center w-full m-0 pb-[10px] justify-center duration-500 ${isScroll ? 'header-scrolled' : ''}`}>
-            <div className="w-full max-w-[1246px] px-[15px] mt-[10px] mx-auto">
+            <div className="w-full max-w-[1400px] px-[15px] mt-[10px] mx-auto">
                 <div className={`menu flex flex-1 items-center justify-center gap-10`}>
                     <div className="w-full items-center justify-center gap-80">
                         <div className='flex logo-align'>
@@ -70,23 +75,23 @@ export default function Header() {
                 
             </div>
         </header>
-    <div className={`container-menu flex-1 z-40 fixed items-center w-full m-0 pb-[10px] justify-center transition-all flex duration-700 ${isVisible ? '!flex' : '!hidden'}`}>
+    <div className={`container-menu flex-1 z-40 fixed items-center w-full m-0 pb-[10px] justify-center flex ${isVisible ? '!flex' : '!hidden'}`}>
         <nav className='flex flex-col gap-8'>
             <i className="hamburguer transition-all duration-700" onClick={() => setMenuIsVisible(false)}><FontAwesomeIcon icon={faXmark} style={{color: "#02b3ee", fontSize: "20px"}}></FontAwesomeIcon></i>
             
-            <Link href={"/"} className='justify-center flex'>
+            <Link href={"/"} className='justify-center flex' onClick={closeinmenu}>
                 <ItemMenu name={"Home"} />
             </Link>
-            <Link href={"/about-us"} className='justify-center flex'>
+            <Link href={"/about-us"} className='justify-center flex' onClick={closeinmenu}>
                 <ItemMenu name={"Quem Somos"} />
             </Link>
-            <Link href={"/system"} className='justify-center flex'>
+            <Link href={"/system"} className='justify-center flex' onClick={closeinmenu}>
                 <ItemMenu name={"Sistemas"} />
             </Link>
-            <Link href={"/contact"} className='justify-center flex'>
+            <Link href={"/contact"} className='justify-center flex' onClick={closeinmenu}>
                 <ItemMenu name={"Contato"} />
             </Link>
-            <Link href={"/support"} className='justify-center flex'>
+            <Link href={"/support"} className='justify-center flex' onClick={closeinmenu}>
             <button className="change-icon-menu flex items-center justify-center gap-3 bg-primary-color hover:bg-transparent rounded-[30px] h-12 pl-6 pr-6 border-solid border-2 border-primary-color hover:border-primary-color duration-300">
                     <i className='change-text-menu' style={{fontSize: "20px", color: "white"}}><FontAwesomeIcon icon={faHeadset}></FontAwesomeIcon></i>
                     <span className="change-text-menu font-black tracking-wider text-[17px]">SUPORTE</span>

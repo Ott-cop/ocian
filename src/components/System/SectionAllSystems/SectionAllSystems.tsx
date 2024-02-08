@@ -9,7 +9,8 @@ import SystemTDPJ from "./System-tdpj";
 export default function SectionAllSystems() {
     return(
         <>
-            <div>
+            <div className="pb-[200px] bg-[#e6f3fc]">
+                
                 <SystemImmobile title={"Imóveis"} paragraph={`Desenvolvido para as serventias de Registro de Imóveis, com o objetivo de agilizar os processos, proporcionando rapidez
                     e dinamismo, desde a recepção até a entrega final do título, emissão de certidões, consultas a indicadores e muito mais.
                     Planejado para que sua usabilidade seja simples e os resultados sejam eficientes. Além de todo desempenho obtido, há total
@@ -20,6 +21,7 @@ export default function SectionAllSystems() {
                 <SystemBackup title={"Backup"} paragraph={`Tão importante quanto às facilidades geradas pelos sistemas Ocian, a proteção e o processo de backup dos dados são essenciais para garantir o funcionamento seguro dos cartórios, caso aconteça algum tipo de problema durante a rotina. Planejado para atender essas realidades, o Ocian backup é totalmente gerenciado, prático e seguro, além de seguir todas as recomendações do CNJ e da CGJ.`}></SystemBackup>
                 <SystemGED title={"GED"} paragraph={`Desenvolvido para converter os documentos das serventias para o formato digital, a Ocian GED conta com as funcionalidades de digitalização, indexação, consultas, impressões de imagens e impressões de certidões reprográficas. Planejado para ser intuitivo e ágil, o Ocian GED proporciona alto ganho de desempenho nas rotinas, em que as imagens do documento são utilizadas. A especialidade é integrada aos demais sistemas Ocian.`}></SystemGED>
                 <SystemDistributor title={"Distribuidor"} paragraph={`Com interface simples e intuitiva, o Ocian Distribuidor tem compatibilidade com diversos sistemas do mercado. Planejado para oferecer facilidade e agilidade na distribuição, esta especialidade conta com telas simples para leitura e preenchimento. A distribuição é feita de forma igualitária, segundo normativa, tanto quantitativa quanto qualitativa.`}></SystemDistributor>
+               
             </div>
         </>
     );
