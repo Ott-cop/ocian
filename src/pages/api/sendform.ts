@@ -28,7 +28,6 @@ export default async function SendForm({form, name, email, phone, subject, messa
                 mode: 'cors',
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json',
                     'Access-Control-Allow-Origin': '*'
                 },
                 body: JSON.stringify({

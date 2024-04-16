@@ -28,7 +28,7 @@ export default async function SendFormCurriculum({form, name, email, phone, file
         },
         didOpen: async () => {
             Swal.showLoading();
-            // let response = await fetch(`http://127.0.0.1:8080/${form}`, {
+
             let response = await fetch(`https://ocian-backend.onrender.com/${form}`, {
                 mode: 'cors',
                 method: 'POST',
