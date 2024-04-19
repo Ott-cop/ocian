@@ -1,5 +1,3 @@
-import { icon } from "@fortawesome/fontawesome-svg-core";
-import { title } from "process";
 import Swal from "sweetalert2";
 import "@/styles/Home/styles.module.css"
 

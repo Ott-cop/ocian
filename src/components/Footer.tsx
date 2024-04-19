@@ -10,7 +10,7 @@ export default function Footer() {
                     <div className="flex justify-center mb-5">
                         <Image src={Logo} alt="Ocian Logo" style={{width: "100px"}}></Image>
                     </div>
-                    <span className="text-[20px]">Todos os direitos reservados &copy;<span className="text-primary-color">Ocian</span></span>
+                    <span className="text-[20px]">Feito por <span className="text-primary-color"><a href="https://github.com/Ott-cop">Otávio Onoue</a></span></span>
                 </div>        
             </div>
         </footer>
